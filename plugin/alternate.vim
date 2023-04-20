@@ -56,7 +56,7 @@ endfun
 
 function! s:Alternate()
      let alt = g:AlternateFile()
-     if alt != 0
+     if alt != "0"
          exe 'e ' . g:AlternateFile()
      endif
 endfun
