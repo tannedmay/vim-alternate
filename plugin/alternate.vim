@@ -55,7 +55,10 @@ function! g:AlternateFile()
 endfun
 
 function! s:Alternate()
-     exe 'e ' . g:AlternateFile()
+     let alt = g:AlternateFile()
+     if alt != 0
+         exe 'e ' . g:AlternateFile()
+     endif
 endfun
 
 function! s:AlternateWarning(msg)
